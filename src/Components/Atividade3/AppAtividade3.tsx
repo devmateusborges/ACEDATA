@@ -55,7 +55,9 @@ const AppAtividade3 = () => {
     }
   };
   //============================================================
-
+  const Clear = () => {
+    setsequancia([]);
+  };
   return (
     <>
       {ShowAtv3 ? (
@@ -80,8 +82,10 @@ const AppAtividade3 = () => {
             <br />
             <div className="grid grid-flow-row">
               {resAtv &&
-                sequencia.map((numbers: any) => (
-                  <span className="flex ml-2">{numbers}</span>
+                sequencia.map((numbers: any, index) => (
+                  <span className="flex ml-2">
+                    posição {index} : {numbers}
+                  </span>
                 ))}
             </div>
             <br />
@@ -106,6 +110,12 @@ const AppAtividade3 = () => {
           </div>
           <button className="Button-Card" onClick={() => handleAtv3()}>
             Executar
+          </button>
+          <button
+            className="ml-2 Button-Card bg-red-500"
+            onClick={() => Clear()}
+          >
+            Limpar
           </button>
         </div>
       ) : null}
