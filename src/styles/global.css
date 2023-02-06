@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .Card {
+    @apply rounded-lg h-[150vh] flex  flex-col items-center mt-8;
+  }
+  .Card-Items {
+    @apply flex flex-col items-center justify-center bg-white shadow-sm shadow-slate-500 w-[70%];
+  }
+}

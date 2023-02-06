@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .Card-Ativ {
+    @apply m-5;
+  }
+  .Card-Top {
+    @apply flex p-5 right-1 w-full;
+  }
+  .Card-Top h1 {
+    @apply text-3xl;
+  }
+  .Card-Input {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .Card-Input input {
+    @apply p-5 w-[50%] m-5 shadow-slate-500 shadow-sm rounded-lg outline-none;
+  }
+  .Button-Card {
+    @apply bg-green-600 p-5 rounded-lg text-white;
+  }
+  .title-div {
+    @apply mt-5;
+  }
+  .title-div h1 {
+    @apply font-bold text-3xl;
+  }
+  .button_atv2 {
+    @apply bg-green-600 p-2 rounded-lg text-white font-bold mt-5;
+  }
+}

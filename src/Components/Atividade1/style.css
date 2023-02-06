@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .Card-Ativ {
+    @apply m-5 w-[100%];
+  }
+  .Card-Top {
+    @apply flex p-5 right-1 w-full;
+  }
+  .Card-Top h1 {
+    @apply text-3xl;
+  }
+  .Card-Input {
+    @apply w-[50%] flex flex-col items-center justify-center;
+  }
+
+  .nputs {
+    @apply shadow-slate-500 shadow-sm rounded-lg outline-none;
+  }
+  .Button-Card {
+    @apply bg-green-600 p-5 rounded-lg text-white;
+  }
+  .Ativ1-res {
+    @apply w-[50%];
+  }
+}
