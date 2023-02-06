@@ -7,7 +7,7 @@ import "./styles/global.css";
 function App() {
   return (
     <div className="Card">
-      <div className="Card-Items">
+      <div className="Card-Items ">
         <AppAtividade2 />
         <AppAtividade1 />
         <AppAtividade3 />
