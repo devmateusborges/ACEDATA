@@ -57,6 +57,8 @@ const AppAtividade3 = () => {
   //============================================================
   const Clear = () => {
     setsequencia([]);
+    setNumber("");
+    setResAtv("");
   };
   return (
     <>
