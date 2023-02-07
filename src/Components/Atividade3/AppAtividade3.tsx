@@ -7,7 +7,7 @@ const AppAtividade3 = () => {
   const [Atvi1, setAtivi1] = useState<any>();
   const [number, setNumber] = useState("");
   const [resAtv, setResAtv] = useState("");
-  const [sequencia, setsequancia] = useState<number[]>([]);
+  const [sequencia, setsequencia] = useState<any>([]);
   //============================================================
 
   const ShowAtv3 = useSelector(
@@ -21,17 +21,17 @@ const AppAtividade3 = () => {
     let NumeroDigitado = Number(number);
     let Number_ant = 0;
     let Number_atual = 1;
-    let contador = 1;
+    let contador = 0;
     let Number_prox;
     let estaNaSquencia = false;
-
+    let arr = [];
     while (contador < NumeroDigitado) {
       Number_prox = Number_atual + Number_ant;
       Number_ant = Number_atual;
       Number_atual = Number_prox;
 
-      sequencia[0] = 1;
-      sequencia[contador] = Number_atual;
+      arr[0] = 1;
+      arr[contador] = Number_atual;
 
       if (NumeroDigitado == Number_prox) {
         estaNaSquencia = true;
@@ -39,7 +39,7 @@ const AppAtividade3 = () => {
 
       contador++;
     }
-
+    setsequencia(arr);
     if (NumeroDigitado == 1 || NumeroDigitado == 2 || NumeroDigitado == 3) {
       estaNaSquencia = true;
     }
@@ -56,7 +56,7 @@ const AppAtividade3 = () => {
   };
   //============================================================
   const Clear = () => {
-    setsequancia([]);
+    setsequencia([]);
   };
   return (
     <>
@@ -82,7 +82,7 @@ const AppAtividade3 = () => {
             <br />
             <div className="grid grid-flow-row">
               {resAtv &&
-                sequencia.map((numbers: any, index) => (
+                sequencia.map((numbers: any, index: number) => (
                   <span className="flex ml-2">
                     posição {index + 1} : {numbers}
                   </span>
