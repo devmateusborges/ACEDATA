@@ -84,7 +84,7 @@ const AppAtividade3 = () => {
               {resAtv &&
                 sequencia.map((numbers: any, index) => (
                   <span className="flex ml-2">
-                    posição {index} : {numbers}
+                    posição {index + 1} : {numbers}
                   </span>
                 ))}
             </div>
